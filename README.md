@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Human Resource Management System
 
 This is an Employee Management System built with Flask, SQLAlchemy, and SQLite. It allows users to manage employee records, including adding new employees, marking attendance, and generating reports.
@@ -82,3 +83,7 @@ http://127.0.0.1:5000/
 
 ## Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request.
+=======
+# HRMS-FLASK-APP
+This project simulates a Basic HRMS (Human Resource Management System) with functionalities such as employee management, attendance tracking, and basic reporting.
+>>>>>>> 3b26c4b518fd39ead542b1102a23020f82103776
