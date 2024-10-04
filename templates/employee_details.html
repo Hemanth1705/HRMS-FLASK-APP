@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>{{ employee.name }}'s Details</h1>
+    <p><strong>Designation:</strong> {{ employee.designation }}</p>
+    <p><strong>Department:</strong> {{ employee.department }}</p>
+    <p><strong>Date of Joining:</strong> {{ employee.date_of_joining }}</p>
+
+    <h2>Attendance Records</h2>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        {% for record in attendance_records %}
+        <tr>
+            <td>{{ record.date }}</td>
+            <td>{{ record.status }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="2">No attendance records available</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Mark Attendance</h2>
+    <form method="POST" action="/mark_attendance/{{ employee.id }}">
+        <input type="date" name="date" required>
+        <select name="status" required>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        <button type="submit">Mark Attendance</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Report</title>
+</head>
+<body>
+    <h1>Employee Count by Department</h1>
+    <table border="1">
+        <tr>
+            <th>Department</th>
+            <th>Number of Employees</th>
+        </tr>
+        {% for department, count in report_data %}
+        <tr>
+            <td>{{ department }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
